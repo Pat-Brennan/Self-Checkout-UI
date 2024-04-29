@@ -1,0 +1,78 @@
+/* body {
+	overflow: hidden;
+} */
+
+.flex-grid {
+	display: flex;
+}
+
+.col {
+	flex: 1;
+}
+
+.logo {
+	display: flex;
+	height: 10em;
+	width: auto;
+	background-color: #9f3895;
+	/* margin-left: auto;
+	margin-right: auto;
+	width: 50%; */
+}
+
+.logo-img {
+	margin: auto;
+	width: auto;
+	/* border: 3px solid green; */
+	/* padding: 10px; */
+	height: 150px;
+}
+
+.border {
+	border-bottom: 0.5em solid transparent;
+	border-image: linear-gradient(
+		90deg,
+		#320f32 0%,
+		#320f32 8.2%,
+		#9f3895 8.3%,
+		#9f3895 23.8%,
+		#fbb03f 23.9%,
+		#fbb03f 30.4%,
+		#f3cb36 30.5%,
+		#f3cb36 44.6%,
+		#8c7f32 44.7%,
+		#8c7f32 46.4%,
+		#a6c838 46.5%,
+		#a6c838 85.2%,
+		#39b54a 85.3%,
+		#39b54a 88.1%,
+		#00a2ae 88.2%,
+		#00a2ae 100%
+	);
+	border-image-slice: 1;
+	margin: 0px;
+}
+
+.btn {
+	display: flex;
+	background-color: transparent;
+	justify-content: center;
+	align-items: center;
+	margin: 32px;
+	padding: 32px;
+	box-shadow: 0.3em 0.3em 1em rgba(41, 40, 40, 0.336);
+}
+
+.btn-border {
+	border: 6px solid #9f3895;
+	border-radius: 32px;
+}
+
+.btn-border:hover {
+	border-color: #39b54a;
+	transition: 200ms ease-in;
+}
+
+.btn-img {
+	height: auto;
+}
