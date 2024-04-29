@@ -61,6 +61,7 @@
 	margin: 32px;
 	padding: 32px;
 	box-shadow: 0.3em 0.3em 1em rgba(41, 40, 40, 0.336);
+	transition: 200ms ease-in-out;
 }
 
 .btn-border {
@@ -70,8 +71,11 @@
 
 .btn-border:hover {
 	border-color: #39b54a;
-	transition: 200ms ease-in;
 }
+
+/* .btn-border:hover:after {
+	transition: 200ms ease-out;
+} */
 
 .btn-img {
 	height: auto;
