@@ -12,7 +12,7 @@
 
 .logo {
 	display: flex;
-	height: 10em;
+	height: 12em;
 	width: auto;
 	background-color: #9f3895;
 	/* margin-left: auto;
@@ -25,7 +25,7 @@
 	width: auto;
 	/* border: 3px solid green; */
 	/* padding: 10px; */
-	height: 150px;
+	height: 200px;
 }
 
 .border {
@@ -64,12 +64,35 @@
 	transition: 200ms ease-in-out;
 }
 
-.btn-border {
+/* button borders  */
+.btn-border-catalog {
+	border: 6px solid #9f3895;
+	border-radius: 32px;
+}
+.btn-border-checkout {
+	border: 6px solid #9f3895;
+	border-radius: 32px;
+}
+.btn-border-events {
+	border: 6px solid #9f3895;
+	border-radius: 32px;
+}
+.btn-border-meeting {
 	border: 6px solid #9f3895;
 	border-radius: 32px;
 }
 
-.btn-border:hover {
+/* button border hover effects  */
+.btn-border-catalog:hover {
+	border-color: #00a2ae;
+}
+.btn-border-checkout:hover {
+	border-color: #320f32;
+}
+.btn-border-events:hover {
+	border-color: #fbb03f;
+}
+.btn-border-meeting:hover {
 	border-color: #39b54a;
 }
 
