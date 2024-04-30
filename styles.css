@@ -87,13 +87,13 @@
 	border-color: #00a2ae;
 }
 .btn-border-checkout:hover {
-	border-color: #320f32;
+	border-color: #4f0045;
 }
 .btn-border-events:hover {
 	border-color: #fbb03f;
 }
 .btn-border-meeting:hover {
-	border-color: #39b54a;
+	border-color: #a6c838;
 }
 
 /* .btn-border:hover:after {
@@ -102,4 +102,5 @@
 
 .btn-img {
 	height: auto;
+	width: auto;
 }
