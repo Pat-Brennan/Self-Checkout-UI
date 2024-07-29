@@ -1,6 +1,8 @@
-/* body {
-	overflow: hidden;
-} */
+* {
+	/* overflow: hidden; */
+	margin: 0;
+	padding: 0;
+}
 
 .flex-grid {
 	display: flex;
