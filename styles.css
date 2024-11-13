@@ -6,6 +6,7 @@
 
 .flex-grid {
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .col {
@@ -17,7 +18,7 @@
 	height:0;
 }
 
-.logo {
+.header-logo {
 	display: flex;
 	height: 12em;
 	width: auto;
