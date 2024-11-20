@@ -1,89 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./styles.css" />
-		<title>Self-Checkout-UI</title>
-	</head>
-	<body>
-		<header>
-			<div class="header-logo">
-				<img
-					class="logo-img"
-					src="./images/CCLS_LOGO_WHITE_T.png"
-					alt="Camden County Library System Logo"
-				/>
-			</div>
-			<hr class="border" />
-			<!-- <div><img src="./images/color bar 2019.png" alt="Divider" /></div> The above CCLS Border as an image-->
-		</header>
-		<nav>
-			<div class="flex-grid">
-				<section class="col">
-					<div class="btn btn-border-catalog btn-img">
-						<a href="https://catalog.camdencountylibrary.org/">
-							<img
-								src="./images/CatalogSearchBlueAvenir.png"
-								alt="Catalog Search Button"
-								width="300px"
-								height="300px"
-							/>
-						</a>
-					</div>
-					<div class="btn btn-border-checkout btn-img">
-						<a
-							href="https://voorhees.camden.bywatersolutions.com/cgi-bin/koha/sco/sco-main.pl"
-						>
-							<img
-								src="./images/CheckoutPurpleAvenir.png"
-								alt="Checkout Button"
-								width="300px"
-								height="300px"
-							/>
-						</a>
-					</div>
-					<!-- <div class="btn btn-border-events btn-img">
-						<a href="https://www.camdencountylibrary.org/">
-							<img 
-								src="./images/MeetingRoomGreenAvenir.png" 
-								alt="Website Home" 
-								width="300px" 
-								height="300px"
-								>
-						</a> 
-					</div> -->
-				</section>
-				<section class="col">
-					<div class="btn btn-border-events btn-img">
-						<a href="https://events.camdencountylibrary.org/">
-							<img
-								src="./images/EventsOrangeAvenir.png"
-								alt="Events Button"
-								width="300px"
-								height="300px"
-							/>
-						</a>
-					</div>
-					<div class="btn btn-border-meeting btn-img">
-						<a
-							href="https://events.camdencountylibrary.org/reserve-room/by-room"
-						>
-							<img
-								src="./images/MeetingRoomGreenAvenir.png"
-								alt="Meeting Room Button"
-								width="300px"
-								height="300px"
-							/>
-						</a>
-					</div>
-				</section>
-			</div>
-		</nav>	
-<!-- <div class="btn btn-border-events btn-img">
-	<a href="https://www.camdencountylibrary.org/">
-		<img src="./images/MeetingRoomGreenAvenir.png" alt="" width="300px" height="300px">
-	</a> 
-</div> -->
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Self-Checkout UI</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="header-logo">
+        <img
+          class="logo-img"
+          src="./images/CCLS_LOGO_WHITE_T.png"
+          alt="Camden County Library System Logo"
+        />
+      </div>
+      <hr class="border" />
+    </header>
+
+    <!-- Flip Cards Section -->
+    <nav>
+      <div class="flip-card-container">
+        <!-- Catalog Flip Card -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="btn btn-border-catalog card-img">
+                <img
+                  src="./images/CatalogSearchBlueAvenir.png"
+                  alt="Catalog Search Button"
+                />
+              </div>
+            </div>
+            <div class="flip-card-back-catalog">
+              <h3 style="text-align:center;">CATALOG</h3>
+              <p>A place to check out books and resources.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Checkout Flip Card -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="btn btn-border-checkout card-img">
+                <img
+                  src="./images/CheckoutPurpleAvenir.png"
+                  alt="Checkout Button"
+                />
+              </div>
+            </div>
+            <div class="flip-card-back-checkout">
+              <h3>CHECKOUT</h3>
+              <p>Checkout books and manage your account.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Events Flip Card -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="btn btn-border-events card-img">
+                <img
+                  src="./images/EventsOrangeAvenir.png"
+                  alt="Events Button"
+                />
+              </div>
+            </div>
+            <div class="flip-card-back-events">
+              <h3>EVENTS</h3>
+              <p>Explore library events and programs.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Meeting Rooms Flip Card -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="btn btn-border-meeting card-img">
+                <img
+                  src="./images/MeetingRoomGreenAvenir.png"
+                  alt="Meeting Room Button"
+                />
+              </div>
+            </div>
+            <div class="flip-card-back-meetingroom">
+              <h3>MEETINGS</h3>
+              <p>Reserve meeting rooms for events and gatherings.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="footer">
+      <div class="footer-button-display">
+        <img
+          class="logo-img-footer"
+          src="./images/CCLS_LOGO_WHITE_T.png"
+          alt="Camden County Library System Logo"
+        />
+        <button>TEXT SIZE</button>
+        <button id="ctButton">CONTRAST</button>
+        <button class="language-button">ENGLISH</button>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
 </html>
