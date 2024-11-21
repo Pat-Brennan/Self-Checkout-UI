@@ -24,3 +24,30 @@ setInterval(() => {
   currentLanguageIndex = (currentLanguageIndex + 1) % languages.length;
   languageButton.textContent = languages[currentLanguageIndex];
 }, 2000); // Change text every 2 seconds (adjust as needed)
+
+
+/* This is the popup for language select. */
+languageButton.addEventListener(
+  "click",
+  function () {
+      myPopup.classList.add("show");
+  }
+);
+closePopup.addEventListener(
+  "click",
+  function () {
+      myPopup.classList.remove(
+          "show"
+      );
+  }
+);
+window.addEventListener(
+  "click",
+  function (event) {
+      if (event.target == myPopup) {
+          myPopup.classList.remove(
+              "show"
+          );
+      }
+  }
+);
