@@ -3,6 +3,17 @@
 	margin: 0;
 	padding: 0;
   }
+
+  html,body {
+	height: 100%;
+  }
+  .wrap {
+	min-height: 100%;
+  }
+  .main {
+	overflow: auto;
+	/*padding-bottom: 450px;*/
+	/* must be same height as the footer */}
   
   /* Header styling */
   .header-logo {
@@ -133,8 +144,11 @@
   
   /* Footer */
   .footer {
-	position: -webkit-sticky;
+	position: absolute;
+	/*margin-top: 450px;*/
 	bottom: 0;
+	right: 0;
+	left: 0;
 	width: 100%;
 	background-color: #320f32;
 	color: white;
