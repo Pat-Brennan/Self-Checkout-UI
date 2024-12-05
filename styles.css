@@ -102,6 +102,7 @@
     width: 500px;
     height: 500px;
     backface-visibility: hidden;
+	font-size: 16px;
   }
   
   /* Flip card front styling */
