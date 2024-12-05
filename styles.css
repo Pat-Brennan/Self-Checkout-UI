@@ -102,6 +102,7 @@
     width: 500px;
     height: 500px;
     backface-visibility: hidden;
+	font-size: 16px;
   }
   
   /* Flip card front styling */
@@ -215,6 +216,20 @@
 	display: none;
 }
 
+/* the DIV where the buttons themselves are in*/
+.popup-menu {
+	display: flex;            /* Use flexbox for layout */
+	flex-wrap: wrap;          /* Allow wrapping of elements to the next line */
+	gap: 10px;                /* Add space between buttons */
+	margin-bottom: 20px; 	 /* Space between popup menu and the close button */
+  }
+  
+.popup-button {
+	flex: 0 0 calc(50% - 10px);
+	box-sizing: border-box;
+	padding: 10px;
+  }
+
 .popup-content {
 	background-color: white;
 	margin: 10% auto;
@@ -232,4 +247,10 @@
 
 .show {
 	display: block;
+}
+
+#closePopup:hover {
+    background-color: #a6c838;
+	color:white;
+	; /* Optional: Hover effect for close button */
 }
