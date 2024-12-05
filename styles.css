@@ -10,6 +10,12 @@
   .wrap {
 	min-height: 100%;
   }
+
+  .special-heading {
+	font-family: 'Oswald';
+	color: #39b54a;
+  }
+  
   .main {
 	overflow: auto;
 	/*padding-bottom: 450px;*/
@@ -123,7 +129,6 @@
     transform: rotateY(180deg);
   }
 
-  
   /* Flip card back styling */
   .flip-card-back-catalog {
 	background-color: #00a2ae;
@@ -222,6 +227,7 @@
 	flex-wrap: wrap;          /* Allow wrapping of elements to the next line */
 	gap: 10px;                /* Add space between buttons */
 	margin-bottom: 20px; 	 /* Space between popup menu and the close button */
+	margin-top: 20px; 
   }
   
 .popup-button {

@@ -52,5 +52,3 @@ window.addEventListener(
   }
 );
 //! Struggling with the translations...Really bad....
-
-//Skipping to address 'TEXT SIZE'
