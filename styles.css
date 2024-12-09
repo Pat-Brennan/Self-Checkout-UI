@@ -60,7 +60,7 @@
 	border-image-slice: 1;
   }
 
-  .btn {
+  .card {
     background-color: transparent;
     margin: 32px;
     padding: 32px;
@@ -84,7 +84,7 @@
 	perspective: 1000px;
   }
 
-  .flip-card .btn img {
+  .flip-card .card img {
 	width: 100%;
 	height: 
 	auto;
@@ -185,13 +185,6 @@
 	cursor: pointer;
   }
   
-  .language-button {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 105px;
-	height: 39px;
-  }
   
   /* Responsive Design */
   @media (max-width: 768px) {
@@ -205,7 +198,6 @@
 	}
   }
   
-
   .popup {
 	position: fixed;
 	z-index: 1;
@@ -260,3 +252,33 @@
 	color:white;
 	; /* Optional: Hover effect for close button */
 }
+
+/* Style for the Text Size menu */
+#fontSizeMenu {
+	display: none;
+	position: absolute;
+	bottom: 70px;
+	transform: translateX(-27%); /* Adjust horizontally to align it better */
+	background-color: white;
+	color: black;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	padding: 10px;
+	border-radius: 5px;
+  }
+  
+  .font-size-option {
+	padding: 8px 10px;
+	cursor: pointer;
+	font-size: 14px;
+  }
+  
+  .font-size-option:hover {
+	background-color: #f0f0f0;
+  }
+  
+  /* Optionally, style for the body when the font size changes */
+  body {
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 16px; /* Default font size */
+  }
+  
