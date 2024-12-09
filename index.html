@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+      </style>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
@@ -27,7 +30,7 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <div class="btn btn-border-catalog card-img">
+              <div class="card card-border-catalog card-img">
                 <img
                   src="./images/CatalogSearchBlueAvenir.png"
                   alt="Catalog Search Button"
@@ -45,7 +48,7 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <div class="btn btn-border-checkout card-img">
+              <div class="card card-border-checkout card-img">
                 <img
                   src="./images/CheckoutPurpleAvenir.png"
                   alt="Checkout Button"
@@ -63,7 +66,7 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <div class="btn btn-border-events card-img">
+              <div class="card card-border-events card-img">
                 <img
                   src="./images/EventsOrangeAvenir.png"
                   alt="Events Button"
@@ -81,7 +84,7 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <div class="btn btn-border-meeting card-img">
+              <div class="card card-border-meeting card-img">
                 <img
                   src="./images/MeetingRoomGreenAvenir.png"
                   alt="Meeting Room Button"
@@ -107,13 +110,23 @@
         />
 
         <button id="text-size">TEXT SIZE</button>
+        <!-- Font Size Menu -->
+        <div id="fontSizeMenu">
+        <div class="font-size-option" data-size="12px">Small</div>
+        <div class="font-size-option" data-size="16px">Medium</div>
+        <div class="font-size-option" data-size="20px">Large</div>
+        <div class="font-size-option" data-size="24px">Extra Large</div>
+        </div>
+        <!-- I don't even know what's going on anymore. -->
+
+
         <button id="ctButton">CONTRAST</button>
 
         <button class="language-button">ENGLISH</button>
         <div id="myPopup" class="popup">
             <div class="popup-content">
-                <h1 style="color: green">
-                    SELECT A LANGUAGE! <!--!This is ugly and won't be final, hehe.-->
+                <h1 class="special-heading">
+                    SELECT A LANGUAGE
                 </h1>
 
                 <div class="popup-menu">

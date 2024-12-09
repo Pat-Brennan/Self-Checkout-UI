@@ -53,4 +53,54 @@ window.addEventListener(
 );
 //! Struggling with the translations...Really bad....
 
-//Skipping to address 'TEXT SIZE'
+// Wait for the DOM to load before running the script
+document.addEventListener("DOMContentLoaded", function () {
+
+  // Get references to the elements
+  const textSizeButton = document.getElementById("text-size");
+  const fontSizeMenu = document.getElementById("fontSizeMenu");
+  const fontSizeOptions = document.querySelectorAll(".font-size-option");
+  
+  // Show font size menu when the TEXT SIZE button is clicked
+  textSizeButton.addEventListener("click", function () {
+      fontSizeMenu.style.display = fontSizeMenu.style.display === "block" ? "none" : "block";
+  });
+
+  // Loop through font size options and add event listener to change text size
+  fontSizeOptions.forEach(function (option) {
+      option.addEventListener("click", function () {
+          // Get the selected size from the data-size attribute
+          const selectedSize = option.getAttribute("data-size");
+
+          // Apply the selected font size to the body, h3, and p tags
+          document.body.style.fontSize = selectedSize; // Apply to entire body
+
+          // Apply to buttons, h3, and p elements
+          const buttons = document.querySelectorAll("button");
+          const headings = document.querySelectorAll("h3");
+          const paragraphs = document.querySelectorAll("p");
+          
+          buttons.forEach(function (button) {
+              button.style.fontSize = selectedSize;
+          });
+
+          headings.forEach(function (heading) {
+              heading.style.fontSize = selectedSize;
+          });
+
+          paragraphs.forEach(function (para) {
+              para.style.fontSize = selectedSize;
+          });
+
+          // Hide the font size menu after selection
+          fontSizeMenu.style.display = "none";
+      });
+  });
+
+  // Close the font size menu when clicked outside
+  document.addEventListener("click", function (event) {
+      if (!textSizeButton.contains(event.target) && !fontSizeMenu.contains(event.target)) {
+          fontSizeMenu.style.display = "none";
+      }
+  });
+});
