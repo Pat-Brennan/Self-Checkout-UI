@@ -184,6 +184,10 @@
 	font-size: 16px;
 	cursor: pointer;
   }
+
+  .footer-button-display button:hover {
+	background-color: lightgray;
+  }
   
   
   /* Responsive Design */
@@ -241,6 +245,11 @@
 .popup-content button {
 	display: block;
 	margin: 0 auto;
+}
+
+.popup-content button:hover {
+    background-color: #a6c838;
+	color:white;
 }
 
 .show {
