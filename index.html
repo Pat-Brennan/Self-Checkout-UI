@@ -3,7 +3,7 @@
   <head>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
-      </style>
+    </style>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
@@ -30,16 +30,16 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <div class="card card-border-catalog card-img">
+              <div class="btn btn-border-catalog card-img">
                 <img
-                  src="./images/CatalogSearchBlueAvenir.png"
+                  src="./images/CatalogSearchBlueAvenir_NoTxt.png"
                   alt="Catalog Search Button"
                 />
               </div>
             </div>
             <div class="flip-card-back-catalog">
-              <h3 style="text-align:center;" class="translatable">CATALOG</h3>
-              <p class="translatable">A place to check out books and resources.</p>
+              <h3 style="text-align:center;">CATALOG</h3>
+              <p>A place to check out books and resources.</p>
             </div>
           </div>
         </div>
@@ -48,16 +48,16 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <div class="card card-border-checkout card-img">
+              <div class="btn btn-border-checkout card-img">
                 <img
-                  src="./images/CheckoutPurpleAvenir.png"
+                  src="./images/CheckoutPurpleAvenir_NoTxt.png"
                   alt="Checkout Button"
                 />
               </div>
             </div>
             <div class="flip-card-back-checkout">
-              <h3 class="translatable">CHECKOUT</h3>
-              <p class="translatable">Checkout books and manage your account.</p>
+              <h3>CHECKOUT</h3>
+              <p>Checkout books and manage your account.</p>
             </div>
           </div>
         </div>
@@ -66,16 +66,16 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <div class="card card-border-events card-img">
+              <div class="btn btn-border-events card-img">
                 <img
-                  src="./images/EventsOrangeAvenir.png"
+                  src="./images/EventsOrangeAvenir_NoTxt.png"
                   alt="Events Button"
                 />
               </div>
             </div>
             <div class="flip-card-back-events">
-              <h3 class="translatable">EVENTS</h3>
-              <p class="translatable">Explore library events and programs.</p>
+              <h3>EVENTS</h3>
+              <p>Explore library events and programs.</p>
             </div>
           </div>
         </div>
@@ -84,16 +84,16 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <div class="card card-border-meeting card-img">
+              <div class="btn btn-border-meeting card-img">
                 <img
-                  src="./images/MeetingRoomGreenAvenir.png"
+                  src="./images/MeetingRoomGreenAvenir_NoTxt.png"
                   alt="Meeting Room Button"
                 />
               </div>
             </div>
             <div class="flip-card-back-meetingroom">
-              <h3 class="translatable">MEETINGS</h3>
-              <p class="translatable">Reserve meeting rooms for events and gatherings.</p>
+              <h3>MEETINGS</h3>
+              <p>Reserve meeting rooms for events and gatherings.</p>
             </div>
           </div>
         </div>
@@ -109,24 +109,14 @@
           alt="Camden County Library System Logo"
         />
 
-        <button class="translatable" id="text-size">TEXT SIZE</button>
-        <!-- Font Size Menu -->
-        <div id="fontSizeMenu">
-        <div class="translatable font-size-option" data-size="12px">Small</div>
-        <div class="translatable font-size-option" data-size="16px">Medium</div>
-        <div class="translatable font-size-option" data-size="20px">Large</div>
-        <div class="translatable font-size-option" data-size="24px">Extra Large</div>
-        </div>
-        <!-- I don't even know what's going on anymore. -->
-
-
-        <button class="translatable" id="ctButton">CONTRAST</button>
+        <button id="text-size">TEXT SIZE</button>
+        <button id="ctButton">CONTRAST</button>
 
         <button class="language-button">ENGLISH</button>
         <div id="myPopup" class="popup">
             <div class="popup-content">
-                <h1 class="special-heading">
-                    SELECT A LANGUAGE
+                <h1 style="color: green">
+                    SELECT A LANGUAGE! <!--!This is ugly and won't be final, hehe.-->
                 </h1>
 
                 <div class="popup-menu">
@@ -134,14 +124,13 @@
                 <button class="popup-button" id="spanish-button">ESPAÑOL</button>
                 </div>
 
-                <button class="translatable" id="closePopup">
+                <button id="closePopup">
                     CLOSE
                 </button> 
 
             </div>
         </div>
       </div>
-
     </div>
 
     <script src="scripts.js"></script>
