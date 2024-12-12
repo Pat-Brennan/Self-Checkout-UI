@@ -60,12 +60,11 @@
 	border-image-slice: 1;
   }
 
+ 
+  /* I think this is a nothing burger.
   .card {
     background-color: transparent;
-    margin: 32px;
-    padding: 32px;
-    box-shadow: 0.3em 0.3em 1em rgba(41, 40, 40, 0.336);
-}
+} */
 
 /* Text for each individual cards  */
 .card-text-catalog {
@@ -85,36 +84,38 @@
 	font-size: 2.5em;
 }
 
-  /* Flip card container */
+/* Flip card styling */
+.flip-card {
+	width: 48%; /* Keeps it to two cards per row */
+	height: 500px;
+	perspective: 1000px;
+  }
+
+  /* Flip card container. It's what holds all the cards. */
   .flip-card-container {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
 	gap: 20px; /* Adjust the gap as needed */
 	margin: 20px auto; /* Center the container horizontally */
-	padding: 0 20px;
+	padding: 20px;
   }
   
-  /* Flip card styling */
-  .flip-card {
-	width: 48%; /* Two cards per row */
-	height: 500px;
-	perspective: 1000px;
-  }
-
   .flip-card .card img {
 	width: 100%;
 	height: 
 	auto;
-	overflow: hidden; /* Hide anything that goes beyond the boundaries of the card */
   }
 
+/*This container is needed to position the front and back side of the card. */
   .flip-card-inner {
 	position: relative;
 	width: 500px;
 	height:500px;
+	text-align: center; /*Ths is centering "h2" headers on front of card. */
 	transform-style: preserve-3d;
 	transition: transform 0.60s;
+	box-shadow: 0.3em 0.3em 1em rgba(41, 40, 40, 0.336);
   }
   
   /* Flip card faces */
@@ -125,15 +126,16 @@
     backface-visibility: hidden;
 	font-size: 16px;
   }
-  
-  /* Flip card front styling */
+
+  /* I think this is another nothing burger. 
+  When it's commented OUT, the image also stops spilling from the top of the card when flipped to its back for descriptions
   .flip-card-front {
 	background-color: #fff;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-  }
+  }  */
 
   .flip-card-back-catalog, .flip-card-back-checkout, .flip-card-back-events, .flip-card-back-meetingroom {
     color: white;
@@ -288,6 +290,7 @@
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 	padding: 10px;
 	border-radius: 5px;
+	z-index: 10000;
   }
   
   .font-size-option {

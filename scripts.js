@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //! Struggling with the translations...Really bad....
 
 // Global variable to store the current language
-let currentLanguage = "en";  // Default language is English
+let currentLanguage = "en"; // Default language is English
 
 // Function to toggle the visibility of the language selection popup
 function togglePopup() {
