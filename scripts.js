@@ -1,3 +1,27 @@
+/* Flip on click functionality. */
+document.addEventListener("DOMContentLoaded", function () {
+  const flipCards = document.querySelectorAll('.flip-card'); // Select all flip cards
+  let flippedCard = null; // Track the currently flipped card
+
+  flipCards.forEach(card => {
+    card.addEventListener('click', function () {
+      const cardInner = card.querySelector('.flip-card-inner'); // Get the inner part of the card
+
+      // If another card is flipped, flip it back to the front
+      if (flippedCard && flippedCard !== card) {
+        flippedCard.querySelector('.flip-card-inner').style.transform = ''; // Reset the previous card flip
+      }
+
+      // Flip the current card
+      cardInner.style.transform = cardInner.style.transform === 'rotateY(180deg)' ? '' : 'rotateY(180deg)';
+
+      // Update the currently flipped card
+      flippedCard = cardInner.style.transform === 'rotateY(180deg)' ? card : null;
+    });
+  });
+});
+
+
 /* I'm copying what Envisionware did... Their "Adjust Contrast" just turns the entire page Black and White with no slider.
 I'm assuming someone uses it and loves it as is so... */
 const ctButton = document.getElementById('ctButton');
