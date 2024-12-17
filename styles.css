@@ -326,7 +326,8 @@ h2 {
 	padding: 20px;
 	border: 1px solid #888888;
 	width: 30%;
-	font-weight: bolder;
+	/* font-family: 'Avenir-Light'; */
+	/* font-weight: bolder; */
 	color: black;
 }
 
