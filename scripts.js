@@ -99,6 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           // Apply to buttons, h3, and p elements
           const buttons = document.querySelectorAll("button");
+          const h2Elements = document.querySelectorAll("h2"); // Also target h2
           const headings = document.querySelectorAll("h3");
           const paragraphs = document.querySelectorAll("p");
           
@@ -114,6 +115,18 @@ document.addEventListener("DOMContentLoaded", function () {
               para.style.fontSize = selectedSize;
           });
 
+          h2Elements.forEach(function (h2) {
+            let h2FontSize = 2.5; // Default base font size for h2 in em (2.5em)
+            if (selectedSize === '18px') {
+                h2FontSize = 2.0; // Adjust for medium size
+            } else if (selectedSize === '20px') {
+                h2FontSize = 2.2; // Adjust for large size
+            } else if (selectedSize === '22px') {
+                h2FontSize = 2.5; // Adjust for extra large size
+            }
+            h2.style.fontSize = `${h2FontSize}em`;
+          });
+          
           // Hide the font size menu after selection
           fontSizeMenu.style.display = "none";
       });

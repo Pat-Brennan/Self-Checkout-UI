@@ -90,24 +90,25 @@
 
 h2 {
 	font-family: 'Avenir-Black';
+	font-size: 2.5em;
 }
 
 /* Text for each individual cards  */
 .card-text-catalog {
 	color: #00a2ae;
-	font-size: 2.5em;
+	
 }
 .card-text-checkout {
 	color: #320f32;
-	font-size: 2.5em;
+	
 }
 .card-text-events {
 	color: #fbb03f;
-	font-size: 2.5em;
+
 }
 .card-text-meetings {
 	color: #a6c838;
-	font-size: 2.5em;
+	
 }
 
 /* Flip card styling */
@@ -190,6 +191,9 @@ h2 {
 
   }
 
+
+  /*!FOR THE FIRST BUTTON, MEETING ROOMS. */
+
   .back-card-button {
 	font-size: 18px;
 	/* font-weight: 200; */
@@ -227,13 +231,152 @@ h2 {
 	top: 0px;
 	left: 0px;
   }
-  
+
   @media (min-width: 768px) {
 	.back-card-button {
 	  padding: 13px 50px 13px;
 	}
   }
 
+/*!FOR THE FIRST BUTTON, MEETING ROOMS. END */
+
+
+/*? FOR THE SECOND BUTTON, CHECKOUT */
+  .back-card-buttonV2 {
+	appearance: button;
+	background-color: #9f3895;
+	border: solid transparent;
+	border-radius: 16px;
+	border-width: 0 0 4px;
+	box-sizing: border-box;
+	color: #FFFFFF;
+	cursor: pointer;
+	display: inline-block;
+	font-family: din-round,sans-serif;
+	font-size: 15px;
+	font-weight: 700;
+	letter-spacing: .8px;
+	line-height: 20px;
+	margin: 0;
+	margin-top: 20px; /* Adjust this value to control the space */
+	outline: none;
+	overflow: visible;
+	padding: 20px 16px;
+	text-align: center;
+	text-transform: uppercase;
+	touch-action: manipulation;
+	transform: translateZ(0);
+	transition: filter .2s;
+	user-select: none;
+	-webkit-user-select: none;
+	vertical-align: middle;
+	white-space: nowrap;
+	width: 100%;
+  }
+  
+  .back-card-buttonV2:after {
+	background-clip: padding-box;
+	background-color: #a04597;
+	border: solid transparent;
+	border-radius: 16px;
+	border-width: 0 0 4px;
+	bottom: -4px;
+	content: "";
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: -1;
+  }
+  
+  .back-card-buttonV2,
+  .back-card-buttonV2:focus {
+	user-select: auto;
+  }
+  
+  .back-card-buttonV2:hover:not(:disabled) {
+	filter: brightness(1.1);
+	-webkit-filter: brightness(1.1);
+  }
+  
+  .back-card-buttonV2:disabled {
+	cursor: auto;
+  }
+  
+  .back-card-buttonV2:active {
+	border-width: 4px 0 0;
+	background: none;
+  }
+/*? FOR THE SECOND BUTTON, CHECKOUT. END */
+.back-card-buttonV3 {
+	padding: 0.6em 2em;
+	border: none;
+	outline: none;
+	color: black;
+	background-color: white;
+	cursor: pointer;
+	position: relative;
+	z-index: 0;
+	border-radius: 10px;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	margin: 20px;
+  }
+  
+  .back-card-buttonV3:before {
+	content: "";
+	background: linear-gradient(
+	  45deg,
+	  #320f32,
+	  #9f3895,
+	  #a6c838,
+	  #39b54a,
+	  #00a2ae
+	);
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	background-size: 400%;
+	z-index: -1;
+	filter: blur(5px);
+	-webkit-filter: blur(5px);
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	animation: glowing-back-card-buttonV3 20s linear infinite;
+	transition: opacity 0.3s ease-in-out;
+	border-radius: 10px;
+  }
+  
+  @keyframes glowing-back-card-buttonV3 {
+	0% {
+	  background-position: 0 0;
+	}
+	50% {
+	  background-position: 400% 0;
+	}
+	100% {
+	  background-position: 0 0;
+	}
+  }
+  
+  .back-card-buttonV3:after {
+	z-index: -1;
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: white;
+	left: 0;
+	top: 0;
+	border-radius: 10px;
+  }
+
+
+
+
+
+  
   /* Footer */
   .footer {
 	position: absolute;
@@ -303,6 +446,8 @@ h2 {
 			0,
 			0.4);
 	display: none;
+	justify-content: center;   /* Center horizontally */
+	align-items: center;       /* Center vertically */
 }
 
 /* the DIV where the buttons themselves are in*/
@@ -314,7 +459,7 @@ h2 {
 	margin-top: 20px; 
   }
   
-.popup-button {
+.popup-button button {
 	flex: 0 0 calc(50% - 10px);
 	box-sizing: border-box;
 	padding: 10px;
