@@ -82,7 +82,7 @@
 	border-image-slice: 1;
   }
 
- 
+
   /* I think this is a nothing burger.
   .card {
     background-color: transparent;
@@ -130,8 +130,7 @@ h2 {
   
   .flip-card .card img {
 	width: 100%;
-	height: 
-	auto;
+	height: auto;
   }
 
 /*This container is needed to position the front and back side of the card. */
@@ -372,10 +371,55 @@ h2 {
 	border-radius: 10px;
   }
 
+/*! PHOTO CAROUSEL 📸 */
+
+.container {
+	max-width: 1080px;
+	height: 25vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+}
+
+.carousel-view {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+	padding: 44px 0;
+	transition: all 0.25s ease-in;
+}
+
+.carousel-view .item-list {
+	max-width: 1080px;
+	width: 100vw;
+	padding: 50px 10px;
+	display: flex;
+	gap: 48px;
+	scroll-behavior: smooth;
+	transition: all 0.25s ease-in;
+	-ms-overflow-style: none;
+	/* IE and Edge */
+	scrollbar-width: none;
+	/* Firefox */
+	overflow: auto;
+	scroll-snap-type: x mandatory;
+}
 
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+.item-list::-webkit-scrollbar {
+	display: none;
+}
 
-
+.item {
+	scroll-snap-align: center;
+	min-width: 200px;
+	height: 200px;
+	background-color: deeppink;
+	border-radius: 8px;
+}
   
   /* Footer */
   .footer {
