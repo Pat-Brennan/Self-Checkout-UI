@@ -21,6 +21,30 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+//? PHOTO CAROUSEL
+const list = document.getElementById('item-list');
+
+// Function to calculate slide width (adjust calculation if needed)
+function calculateSlideWidth() {
+    const itemWidth = 150; // Adjust if necessary
+    const padding = 10; // Adjust if necessary
+    return itemWidth + padding;
+}
+
+let currentPosition = 0;
+const slideWidth = calculateSlideWidth();
+
+// Automate carousel
+function autoScroll() {
+    const maxScroll = list.scrollWidth - list.clientWidth;
+    currentPosition += slideWidth;
+    if (currentPosition > maxScroll) {
+        currentPosition = 0;
+    }
+    list.scrollLeft = currentPosition;
+}
+
+setInterval(autoScroll, 3000);
 
 /* I'm copying what Envisionware did... Their "Adjust Contrast" just turns the entire page Black and White with no slider.
 I'm assuming someone uses it and loves it as is so... */
