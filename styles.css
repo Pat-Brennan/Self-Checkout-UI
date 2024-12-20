@@ -35,29 +35,29 @@
 	height: 200px;
   }
 
-	/* Adds the Avenir LIGHT Custom font */
+	/** Adds the Avenir LIGHT Custom font */
 	@font-face {
 		font-family: 'Avenir-Light';
 		src: url('./fonts/Avenir-Book-01.ttf') format('truetype');
 	}
-	/* Adds the Avenir LIGHT Custom font */
+	/** Adds the Avenir LIGHT Custom font */
 	@font-face {
 		font-family: 'Avenir-Medium';
 		src: url('./fonts/Avenir-Medium-09.ttf') format('truetype');
 	}
-	/* Adds the Avenir HEAVY Custom font */
+	/** Adds the Avenir HEAVY Custom font */
 	@font-face {
 		font-family: 'Avenir-Heavy';
 		src: url('./fonts/Avenir-Heavy-05.ttf') format('truetype');
 	}
 
-	/* Adds the Avenir HEAVIEST Custom font */
+	/** Adds the Avenir HEAVIEST Custom font */
 	@font-face {
 		font-family: 'Avenir-Black';
 		src: url('./fonts/Avenir-Black-03.ttf') format('truetype');
 	}
   
-  /* For the color border line */
+  /** For the color border line */
   .border {
 	border-bottom: 0.5em solid transparent;
 	border-image: linear-gradient(
@@ -142,6 +142,7 @@ h2 {
 	transform-style: preserve-3d;
 	transition: transform 0.60s;
 	box-shadow: 0.3em 0.3em 1em rgba(41, 40, 40, 0.336);
+	border-radius: 4px;
   }
   
   /* Flip card faces */
@@ -150,7 +151,8 @@ h2 {
     width: 500px;
     height: 500px;
     backface-visibility: hidden;
-	font-size: 16px;
+		font-size: 16px;
+		border-radius: 4px;
   }
 
   /* I think this is another nothing burger. 
@@ -371,7 +373,7 @@ h2 {
 	border-radius: 10px;
   }
 
-/*! PHOTO CAROUSEL 📸 */
+/*? PHOTO CAROUSEL 📸 */
 
 .container {
 	max-width: 1080px;
@@ -415,13 +417,13 @@ h2 {
 
 .item {
 	scroll-snap-align: center;
-	min-width: 200px;
-	height: 200px;
+	min-width: 225px;
+	height: 225px;
 	background-color: deeppink;
 	border-radius: 4px;
 }
   
-  /* Footer */
+  /*? Footer */
   .footer {
 	position: absolute;
 	/*margin-top: 450px;*/
