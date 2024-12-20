@@ -421,6 +421,7 @@ h2 {
 	height: 225px;
 	background-color: deeppink;
 	border-radius: 4px;
+	box-shadow: 0.3em 0.3em 1em rgba(41, 40, 40, 0.336);
 }
   
   /*? Footer */
