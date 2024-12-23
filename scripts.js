@@ -21,20 +21,44 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-//? PHOTO CAROUSEL
+
+//? FLICKR FUNCTION
 const list = document.getElementById('item-list');
 
 // Function to calculate slide width (adjust calculation if needed)
 function calculateSlideWidth() {
-    const itemWidth = 150; // Adjust if necessary
-    const padding = 10; // Adjust if necessary
-    return itemWidth + padding;
+    // You might need to adjust this calculation based on your new item structure
+    const listItem = list.querySelector('li'); // Get a sample list item
+    return listItem ? listItem.offsetWidth : 235; // 235px as a fallback if no items yet
 }
 
 let currentPosition = 0;
-const slideWidth = calculateSlideWidth();
+let slideWidth = 0;
 
-// Automate carousel
+// Fetch Flickr photos and add them to the carousel
+fetch('https://www.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=e432bc32d8457092de91848dd045e6e0&photoset_id=72177720322693206&user_id=68661893@N00&format=json&nojsoncallback=1')
+    .then(response => response.json())
+    .then(data => {
+        const photos = data.photoset.photo.slice(0, 15); 
+        console.log(photos)
+
+
+        photos.forEach(photo => {
+            const imgUrl = `https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`;
+
+            const listItem = document.createElement('li');
+            const imgElement = document.createElement('img');
+            imgElement.src = imgUrl;
+            imgElement.classList.add('item'); // Add the 'item' class to the image
+            listItem.appendChild(imgElement);
+            list.appendChild(listItem);
+        });
+
+        // After adding the images, calculate the slide width and start the auto scroll
+        slideWidth = calculateSlideWidth(); 
+    });
+
+// Automate carousel 
 function autoScroll() {
     const maxScroll = list.scrollWidth - list.clientWidth;
     currentPosition += slideWidth;
@@ -44,7 +68,34 @@ function autoScroll() {
     list.scrollLeft = currentPosition;
 }
 
-setInterval(autoScroll, 3000);
+  setInterval(autoScroll, 3000);
+
+
+
+//? PHOTO CAROUSEL
+// const list = document.getElementById('item-list');
+
+// // Function to calculate slide width (adjust calculation if needed)
+// function calculateSlideWidth() {
+//     const itemWidth = 150; // Adjust if necessary
+//     const padding = 10; // Adjust if necessary
+//     return itemWidth + padding;
+// }
+
+// let currentPosition = 0;
+// const slideWidth = calculateSlideWidth();
+
+// // Automate carousel
+// function autoScroll() {
+//     const maxScroll = list.scrollWidth - list.clientWidth;
+//     currentPosition += slideWidth;
+//     if (currentPosition > maxScroll) {
+//         currentPosition = 0;
+//     }
+//     list.scrollLeft = currentPosition;
+// }
+
+// setInterval(autoScroll, 3000);
 
 /* I'm copying what Envisionware did... Their "Adjust Contrast" just turns the entire page Black and White with no slider.
 I'm assuming someone uses it and loves it as is so... */
