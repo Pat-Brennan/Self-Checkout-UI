@@ -407,6 +407,7 @@ h2 {
 	/* Firefox */
 	overflow: auto;
 	scroll-snap-type: x mandatory;
+	list-style: none;
 }
 
 
