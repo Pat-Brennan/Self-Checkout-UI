@@ -191,187 +191,107 @@ h2 {
 	background-color: #a6c838;
 
   }
+/* Combined button style */
+.back-card-button {
+  appearance: button;
+  background-color: transparent; /* To allow the gradient background to show through */
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  margin-top: 20px; /* Adjust this value to control the space */
+  outline: none;
+  overflow: visible;
+  padding: 20px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s, background 0.3s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+}
 
+/* Apply linear gradient as the background */
+.back-card-button:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #320f32,
+    #9f3895,
+    #a6c838,
+    #39b54a,
+    #00a2ae
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-back-card-button 20s linear infinite;
+  border-radius: 16px;
+}
 
-  /*!FOR THE FIRST BUTTON, MEETING ROOMS. */
+/* Animation for the glowing effect */
+@keyframes glowing-back-card-button {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
 
-  .back-card-button {
-	font-size: 18px;
-	/* font-weight: 200; */
-	font-family: 'Avenir-Heavy';
-	letter-spacing: 1px;
-	
-	margin: 32px;
-	padding: 13px 20px 13px;
-	outline: 0;
-	border: 2px solid white;
-	border-radius: 2px;
-	cursor: pointer;
-	position: relative;
-	color: white;
-	background-color: rgba(0, 0, 0, 0);
-	user-select: none;
-	-webkit-user-select: none;
-	touch-action: manipulation;
-  }
-  
-  .back-card-button:after {
-	content: "";
-	background-color:#8de4eb;
-	border-radius: 1px;
-	width: 100%;
-	z-index: -1;
-	position: absolute;
-	height: 100%;
-	top: 7px;
-	left: 7px;
-	transition: 0.2s;
-  }
-  
-  .back-card-button:hover:after {
-	top: 0px;
-	left: 0px;
-  }
+/* Button after the gradient */
+.back-card-button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white;
+  left: 0;
+  top: 0;
+  border-radius: 16px;
+}
 
-  @media (min-width: 768px) {
-	.back-card-button {
-	  padding: 13px 50px 13px;
-	}
-  }
+/* Hover effect */
+.back-card-button:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
 
-/*!FOR THE FIRST BUTTON, MEETING ROOMS. END */
+/* Disabled state */
+.back-card-button:disabled {
+  cursor: auto;
+}
 
+/* Active state */
+.back-card-button:active {
+  border-width: 4px 0 0;
+  background: none;
+}
 
-/*? FOR THE SECOND BUTTON, CHECKOUT */
-  .back-card-buttonV2 {
-	appearance: button;
-	background-color: #9f3895;
-	border: solid transparent;
-	border-radius: 16px;
-	border-width: 0 0 4px;
-	box-sizing: border-box;
-	color: #FFFFFF;
-	cursor: pointer;
-	display: inline-block;
-	font-family: din-round,sans-serif;
-	font-size: 15px;
-	font-weight: 700;
-	letter-spacing: .8px;
-	line-height: 20px;
-	margin: 0;
-	margin-top: 20px; /* Adjust this value to control the space */
-	outline: none;
-	overflow: visible;
-	padding: 20px 16px;
-	text-align: center;
-	text-transform: uppercase;
-	touch-action: manipulation;
-	transform: translateZ(0);
-	transition: filter .2s;
-	user-select: none;
-	-webkit-user-select: none;
-	vertical-align: middle;
-	white-space: nowrap;
-	width: 100%;
-  }
-  
-  .back-card-buttonV2:after {
-	background-clip: padding-box;
-	background-color: #a04597;
-	border: solid transparent;
-	border-radius: 16px;
-	border-width: 0 0 4px;
-	bottom: -4px;
-	content: "";
-	left: 0;
-	position: absolute;
-	right: 0;
-	top: 0;
-	z-index: -1;
-  }
-  
-  .back-card-buttonV2,
-  .back-card-buttonV2:focus {
-	user-select: auto;
-  }
-  
-  .back-card-buttonV2:hover:not(:disabled) {
-	filter: brightness(1.1);
-	-webkit-filter: brightness(1.1);
-  }
-  
-  .back-card-buttonV2:disabled {
-	cursor: auto;
-  }
-  
-  .back-card-buttonV2:active {
-	border-width: 4px 0 0;
-	background: none;
-  }
-/*? FOR THE SECOND BUTTON, CHECKOUT. END */
-.back-card-buttonV3 {
-	padding: 0.6em 2em;
-	border: none;
-	outline: none;
-	color: black;
-	background-color: white;
-	cursor: pointer;
-	position: relative;
-	z-index: 0;
-	border-radius: 10px;
-	user-select: none;
-	-webkit-user-select: none;
-	touch-action: manipulation;
-	margin: 20px;
-  }
-  
-  .back-card-buttonV3:before {
-	content: "";
-	background: linear-gradient(
-	  45deg,
-	  #320f32,
-	  #9f3895,
-	  #a6c838,
-	  #39b54a,
-	  #00a2ae
-	);
-	position: absolute;
-	top: -2px;
-	left: -2px;
-	background-size: 400%;
-	z-index: -1;
-	filter: blur(5px);
-	-webkit-filter: blur(5px);
-	width: calc(100% + 4px);
-	height: calc(100% + 4px);
-	animation: glowing-back-card-buttonV3 20s linear infinite;
-	transition: opacity 0.3s ease-in-out;
-	border-radius: 10px;
-  }
-  
-  @keyframes glowing-back-card-buttonV3 {
-	0% {
-	  background-position: 0 0;
-	}
-	50% {
-	  background-position: 400% 0;
-	}
-	100% {
-	  background-position: 0 0;
-	}
-  }
-  
-  .back-card-buttonV3:after {
-	z-index: -1;
-	content: "";
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background: white;
-	left: 0;
-	top: 0;
-	border-radius: 10px;
-  }
 
 /*? PHOTO CAROUSEL 📸 */
 
