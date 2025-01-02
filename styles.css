@@ -151,7 +151,7 @@ h2 {
     width: 500px;
     height: 500px;
     backface-visibility: hidden;
-		font-size: 16px;
+		font-size: 20px;
 		border-radius: 4px;
   }
 
@@ -330,7 +330,6 @@ h2 {
 	list-style: none;
 }
 
-
 /* Hide scrollbar for Chrome, Safari and Opera */
 .item-list::-webkit-scrollbar {
 	display: none;
@@ -344,6 +343,8 @@ h2 {
 	border-radius: 4px;
 	box-shadow: 0.3em 0.3em 1em rgba(41, 40, 40, 0.336);
 }
+/*? PHOTO CAROUSEL END📸 */
+
   
   /*? Footer */
   .footer {
@@ -426,7 +427,7 @@ h2 {
 	margin-bottom: 20px; 	 /* Space between popup menu and the close button */
 	margin-top: 20px; 
   }
-  
+
 .popup-button button {
 	flex: 0 0 calc(50% - 10px);
 	box-sizing: border-box;
