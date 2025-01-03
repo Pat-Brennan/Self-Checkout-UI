@@ -293,20 +293,20 @@ fetch('https://www.flickr.com/services/rest/?method=flickr.photosets.getPhotos&a
     });
 
 // Automate carousel 
-function autoScroll() {
-    const maxScroll = list.scrollWidth - list.clientWidth;
-    currentPosition += slideWidth;
-    if (currentPosition > maxScroll) {
-        currentPosition = 0;
-    }
-    list.scrollLeft = currentPosition;
-}
+// function autoScroll() {
+//     const maxScroll = list.scrollWidth - list.clientWidth;
+//     currentPosition += slideWidth;
+//     if (currentPosition > maxScroll) {
+//         currentPosition = 0;
+//     }
+//     list.scrollLeft = currentPosition;
+// }
 
-  setInterval(autoScroll, 3000);
+//   setInterval(autoScroll, 3000);
 
 
 
-//? PHOTO CAROUSEL
+//? STATIC PHOTO CAROUSEL
 // const list = document.getElementById('item-list');
 
 // // Function to calculate slide width (adjust calculation if needed)
