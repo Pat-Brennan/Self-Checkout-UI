@@ -423,7 +423,7 @@ h2 {
 .popup-menu {
 	display: flex;            /* Use flexbox for layout */
 	flex-wrap: wrap;          /* Allow wrapping of elements to the next line */
-	gap: 10px;                /* Add space between buttons */
+	gap: 5px;                /* Add space between buttons */
 	margin-bottom: 20px; 	 /* Space between popup menu and the close button */
 	margin-top: 20px; 
   }
@@ -431,14 +431,15 @@ h2 {
 .popup-button button {
 	flex: 0 0 calc(50% - 10px);
 	box-sizing: border-box;
-	padding: 10px;
+	padding: 5px;
+	border: 2px solid gainsboro;  /* Add border to buttons */
   }
 
 .popup-content {
 	background-color: white;
 	margin: 10% auto;
 	padding: 20px;
-	border: 1px solid #888888;
+	border: 1px solid gainsboro;
 	width: 30%;
 	/* font-family: 'Avenir-Light'; */
 	/* font-weight: bolder; */
@@ -448,6 +449,7 @@ h2 {
 .popup-content button {
 	display: block;
 	margin: 0 auto;
+	border: 2px solid gainsboro;
 }
 
 .popup-content button:hover {
