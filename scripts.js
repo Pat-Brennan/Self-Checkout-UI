@@ -24,14 +24,30 @@ document.addEventListener("DOMContentLoaded", function () {
 /* I'm copying what Envisionware did... Their "Adjust Contrast" just turns the entire page Black and White with no slider.
 I'm assuming someone uses it and loves it as is so... */
 const ctButton = document.getElementById('ctButton');
-let isGrayscale = false;
+let isGrayscale = false; // Initializing the grayscale state
 
 ctButton.addEventListener('click', () => {
   if (isGrayscale) {
+    // Remove the grayscale effect and reset the background color of flip cards
     document.body.style.filter = 'none';
+    
+    // Reset the background color of flip cards
+    const flipCards = document.querySelectorAll(".flip-card-back-catalog, .flip-card-back-checkout, .flip-card-back-events, .flip-card-back-meetingroom");
+    flipCards.forEach(function(card) {
+      card.style.backgroundColor = ''; // Reset to default or initial state
+    });
+
     isGrayscale = false;
   } else {
+    // Apply the grayscale effect
     document.body.style.filter = 'grayscale(100%)';
+    
+    // Change the background color of the flip cards to specific hex. Requested by Carly and Lisa specifically for accessibility/visibility.
+    const flipCards = document.querySelectorAll(".flip-card-back-catalog, .flip-card-back-checkout, .flip-card-back-events, .flip-card-back-meetingroom");
+    flipCards.forEach(function(card) {
+      card.style.backgroundColor = '#161616'; // Setting to the desired hex color.
+    });
+
     isGrayscale = true;
   }
 });
