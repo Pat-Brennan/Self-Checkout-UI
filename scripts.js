@@ -270,7 +270,7 @@ let currentPosition = 0;
 let slideWidth = 0;
 
 // Fetch Flickr photos and add them to the carousel
-fetch('https://www.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=e432bc32d8457092de91848dd045e6e0&photoset_id=72177720322693206&user_id=68661893@N00&format=json&nojsoncallback=1')
+fetch('https://www.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=e432bc32d8457092de91848dd045e6e0&photoset_id=72177720323070827&user_id=68661893@N00&format=json&nojsoncallback=1')
     .then(response => response.json())
     .then(data => {
         const photos = data.photoset.photo.slice(0, 15); 
@@ -288,23 +288,23 @@ fetch('https://www.flickr.com/services/rest/?method=flickr.photosets.getPhotos&a
             list.appendChild(listItem);
         });
 
-        // After adding the images, calculate the slide width and start the auto scroll
-        slideWidth = calculateSlideWidth(); 
+
     });
 
 // Automate carousel 
 // function autoScroll() {
 //     const maxScroll = list.scrollWidth - list.clientWidth;
-//     currentPosition += slideWidth;
+//     currentPosition += 1;
 //     if (currentPosition > maxScroll) {
 //         currentPosition = 0;
 //     }
 //     list.scrollLeft = currentPosition;
+//     requestAnimationFrame(autoScroll);
 // }
 
-//   setInterval(autoScroll, 3000);
-
-
+// After adding the images, calculate the slide width and start the auto scroll
+// slideWidth = calculateSlideWidth();
+// autoScroll(); 
 
 //? STATIC PHOTO CAROUSEL
 // const list = document.getElementById('item-list');
