@@ -302,18 +302,20 @@ h2 {
 	justify-content: center;
 	align-items: center;
 	background-color: white;
-}
-
-.carousel-view {
+	position: relative; 
+	overflow: hidden; 
+  }
+  
+  .carousel-view {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	gap: 10px;
 	padding: 44px 0;
 	transition: all 0.25s ease-in;
-}
+  }
 
-.carousel-view .item-list {
+  .carousel-view .item-list {
 	max-width: 1080px;
 	width: 100vw;
 	padding: 50px 10px;
@@ -325,30 +327,85 @@ h2 {
 	/* IE and Edge */
 	scrollbar-width: none;
 	/* Firefox */
-	overflow: auto;
 	scroll-snap-type: x mandatory;
 	list-style: none;
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-.item-list::-webkit-scrollbar {
+  }
+   
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .item-list::-webkit-scrollbar {
 	display: none;
-}
-
-.item {
+  }
+   
+  .item {
 	scroll-snap-align: center;
 	min-width: 225px;
 	height: 225px;
 	background-color: deeppink;
 	border-radius: 4px;
 	box-shadow: 0.3em 0.3em 1em rgba(41, 40, 40, 0.336);
-}
+  }
+   
+   /* .carousel-view .item-list {
+	overflow:visible;
+	display: flex;
+	gap: 48px;
+	transition: transform 0.3s ease; /* Use transform for smoother scrolling 
+  } */
+
+  /* .item {
+	min-width: 225px;
+	height: 225px;
+	background-color: deeppink; 
+	border-radius: 4px;
+	box-shadow: 0.3em 0.3em 1em rgba(41, 40, 40, 0.336); 
+  }  */
+
+.arrow {
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 10px;
+	z-index: 2; /* Lower than the footer and popup */
+  }
+  
+  .arrow img {
+	width: 40px; /* Adjust as necessary */
+	height: 40px; /* Adjust as necessary */
+	object-fit: contain; /* Ensures the image scales well without distortion */
+  }
+  
+  /* Position the arrows on the left and right sides */
+  .arrow.left {
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+  }
+  
+  .arrow.right {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+  }
+  
+  /* Make sure carousel container is not overlapping footer */
+  .container {
+	position: relative;
+	z-index: 1;
+  }
+  
+  /* Ensure popup and footer elements stay clickable */
+  .footer, #myPopup {
+	z-index: 10; /* Higher than arrows */
+  }
+  
 /*? PHOTO CAROUSEL END📸 */
 
   
-  /*? Footer */
+  /*! Footer */
   .footer {
-	position: absolute;
+	/* position: absolute; */
 	/*margin-top: 450px;*/
 	bottom: 0;
 	right: 0;
