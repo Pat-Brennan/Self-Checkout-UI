@@ -7,7 +7,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
-    <title>Self-Checkout UI</title>
+    <title>BookIt!</title>
   </head>
 
   <body>
@@ -19,7 +19,6 @@
           <img
             class="logo-img"
             src="./images/CCLS_LOGO_WHITE_T.png"
-            alt="Camden County Library System Logo"
           />
         </a>
       </div>
@@ -127,10 +126,13 @@
 
     <div class="container">
       <div class="carousel-view">
-        <ul id="item-list" class="item-list">
-        </ul>
+        <button class="arrow left" onclick="moveSlide('left')"><img src="images/leftarrow.png" alt="Left Arrow"></button>
+        <ul id="item-list" class="item-list"></ul>
+        <button class="arrow right" onclick="moveSlide('right')"><img src="images/rightarrow.png" alt="Right Arrow"></button>
+        
       </div>
     </div>
+
 <!-- <div class="container">
   <div class="carousel-view">>
     <div id="item-list" class="item-list">

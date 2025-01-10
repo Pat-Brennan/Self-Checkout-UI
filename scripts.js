@@ -274,38 +274,69 @@ document.getElementById("closePopup").addEventListener("click", () => {
 
 //! FLICKR FUNCTION START FOR CAROUSEL //
 const list = document.getElementById('item-list');
-
-// Function to calculate slide width (adjust calculation if needed)
-function calculateSlideWidth() {
-    // You might need to adjust this calculation based on your new item structure
-    const listItem = list.querySelector('li'); // Get a sample list item
-    return listItem ? listItem.offsetWidth : 235; // 235px as a fallback if no items yet
-}
-
 let currentPosition = 0;
 let slideWidth = 0;
+let totalScrollableDistance = 0;
 
-// Fetch Flickr photos and add them to the carousel
+function calculateSlideWidth() {
+  const listItem = list.querySelector('li');
+  return listItem ? listItem.offsetWidth : 235; // Fallback to 235px if no items yet
+}
+
+// Fetch images from Flickr
 fetch('https://www.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=e432bc32d8457092de91848dd045e6e0&photoset_id=72177720323070827&user_id=68661893@N00&format=json&nojsoncallback=1')
-    .then(response => response.json())
-    .then(data => {
-        const photos = data.photoset.photo.slice(0, 15); 
-        console.log(photos)
+  .then(response => response.json())
+  .then(data => {
+    const photos = data.photoset.photo.slice(0, 15);
 
+    photos.forEach(photo => {
+      const imgUrl = `https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`;
 
-        photos.forEach(photo => {
-            const imgUrl = `https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`;
-
-            const listItem = document.createElement('li');
-            const imgElement = document.createElement('img');
-            imgElement.src = imgUrl;
-            imgElement.classList.add('item'); // Add the 'item' class to the image
-            listItem.appendChild(imgElement);
-            list.appendChild(listItem);
-        });
-
-
+      const listItem = document.createElement('li');
+      const imgElement = document.createElement('img');
+      imgElement.src = imgUrl;
+      imgElement.classList.add('item');
+      listItem.appendChild(imgElement);
+      list.appendChild(listItem);
     });
+
+    // Update slide width and total scrollable distance
+    slideWidth = calculateSlideWidth();
+    totalScrollableDistance = slideWidth * photos.length; 
+
+    // **Initial display of all images (important)**
+    list.style.width = `${totalScrollableDistance}px`; 
+  });
+
+// Function to move the slide based on the direction
+function moveSlide(direction) {
+  const totalSlides = list.children.length;
+  if (totalSlides === 0) return; // Exit if no slides available
+
+  if (direction === 'left') {
+    currentPosition = (currentPosition - 1 + totalSlides) % totalSlides;
+  } else if (direction === 'right') {
+    currentPosition = (currentPosition + 1) % totalSlides;
+  }
+   //else if(currentPosition <= totalSlides){
+   // currentPosition === 0;
+  //}
+  
+  // Calculate new translateX value
+  const newTranslateX = -currentPosition * slideWidth;
+
+  // Ensure translateX doesn't exceed total scrollable distance
+  const maxTranslateX = totalScrollableDistance - slideWidth;
+  const translateX = Math.min(newTranslateX, 0); // Clamp to 0 (leftmost position)
+
+  // Adjust the list's scroll position
+  list.style.transition = 'transform 0.3s ease';
+  list.style.transform = `translateX(${translateX}px)`;
+}
+
+// Attach event listeners for the arrows
+document.getElementById('arrow-left').addEventListener('click', () => moveSlide('left'));
+document.getElementById('arrow-right').addEventListener('click', () => moveSlide('right'));
 
 // Automate carousel 
 // function autoScroll() {
