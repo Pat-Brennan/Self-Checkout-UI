@@ -110,7 +110,8 @@ document.addEventListener("DOMContentLoaded", function () {
           const selectedSize = option.getAttribute("data-size");
 
           // Apply the selected font size to the body, h3, and p tags
-          document.body.style.fontSize = selectedSize; // Apply to entire body
+          // Apply to entire body:
+         // document.body.style.fontSize = selectedSize;  Commented out due to its effect on entire page jumping in size instead of just font.
 
           // Apply to buttons, h3, and p elements
           const buttons = document.querySelectorAll("button");
@@ -130,6 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
               para.style.fontSize = selectedSize;
           });
 
+  //This handles h2 separately from the rest of the text sizes because it's a special case. 
           h2Elements.forEach(function (h2) {
             let h2FontSize = 1.9; // Default base font size for h2 in em (2.5em)
             if (selectedSize === '18px') {
@@ -138,10 +140,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 h2FontSize = 2.2; // Adjust for large size
             } else if (selectedSize === '22px') {
                 h2FontSize = 2.5; // Adjust for extra large size
+            } else if (selectedSize === '24px') {
+            h2FontSize = 2.7; // Adjust for extra large size
             }
             h2.style.fontSize = `${h2FontSize}em`;
           });
-          
+       
           // Hide the font size menu after selection
           fontSizeMenu.style.display = "none";
       });
