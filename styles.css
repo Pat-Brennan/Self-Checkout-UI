@@ -6,6 +6,7 @@
 
   html,body {
 	height: 100%;
+	overflow: hidden;
   }
   .wrap {
 	min-height: 100%;
@@ -405,7 +406,7 @@ h2 {
   
   /*! Footer */
   .footer {
-	/* position: absolute; */
+	position: fixed;
 	/*margin-top: 450px;*/
 	bottom: 0;
 	right: 0;
