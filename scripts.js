@@ -57,10 +57,10 @@ const languageButton = document.querySelector('.language-button');
 const languages = ['ESPAÑOL', 'FRANÇAIS', 'DEUTSCH'];
 let currentLanguageIndex = 0;
 
-setInterval(() => {
-  currentLanguageIndex = (currentLanguageIndex + 1) % languages.length;
-  languageButton.textContent = languages[currentLanguageIndex];
-}, 2000); // Change text every 2 seconds (adjust as needed)
+// setInterval(() => {
+//   currentLanguageIndex = (currentLanguageIndex + 1) % languages.length;
+//   languageButton.textContent = languages[currentLanguageIndex];
+// }, 2000); // Change text every 2 seconds (adjust as needed)
 
 /* This is the popup for language select. */
 languageButton.addEventListener(
@@ -231,8 +231,8 @@ function translatePageContent(language) {
         case "Explore library events and programs.":
           element.textContent = "Explore eventos y programas de la biblioteca.";
           break;
-        case "MEETINGS":
-          element.textContent = "REUNIONES";
+        case "RESERVE A ROOM":
+          element.textContent = "RESERVAR HABITACIÓN";
           break;
         case "Reserve meeting rooms for events and gatherings.":
           element.textContent = "Reserve salas de reuniones para eventos y reuniones.";
