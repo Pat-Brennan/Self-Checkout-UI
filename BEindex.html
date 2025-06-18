@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles.css" />
+  <title>BookIt!</title>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-logo">
+
+      <a href="https://www.camdencountylibrary.org/">
+        <img class="logo-img" src="./images/Resived_Final_Logo.png" />
+      </a>
+    </div>
+    <hr class="border" />
+  </header>
+
+  <!-- Flip Cards Section -->
+  <nav>
+    <div class="flip-card-container">
+      <!-- Catalog Flip Card -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="btn btn-border-catalog card-img">
+              <img src="./images/CatalogSearchBlueAvenir_NoTxt.png" alt="Catalog Search Button"
+                style="width:430px;height:430px;" />
+              <h2 class="translatable card-text-catalog">CATALOG</h2>
+            </div>
+          </div>
+          <div class="flip-card-back-catalog">
+            <h3 style="text-align:center;" class="translatable">CATALOG</h3>
+            <p class="translatable">A place to check out books and resources.</p>
+            <a href="https://catalog.camdencountylibrary.org/">
+              <button class="back-card-button"> GO TO CATALOG </Button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Checkout Flip Card -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="btn btn-border-checkout card-img">
+              <img src="./images/CheckoutPurpleAvenir_NoTxt.png" alt="Checkout Button"
+                style="width:430px;height:430px;" />
+              <h2 class="translatable card-text-checkout">CHECKOUT</h2>
+            </div>
+          </div>
+          <div class="flip-card-back-checkout">
+            <h3 class="translatable">CHECKOUT</h3>
+            <p class="translatable">Checkout books and manage your account.</p>
+            <a href="https://bellmawr.camden.bywatersolutions.com/cgi-bin/koha/sco/sco-main.pl">
+              <button class="back-card-button"> GO TO CHECKOUT </button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Events Flip Card -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="btn btn-border-events card-img">
+              <img src="./images/EventsOrangeAvenir_NoTxt.png" alt="Events Button" style="width:430px;height:430px;" />
+              <h2 class="translatable card-text-events">EVENTS</h2>
+            </div>
+          </div>
+          <div class="flip-card-back-events">
+            <h3 class="translatable">EVENTS</h3>
+            <p class="translatable">Explore library events and programs.</p>
+            <a href="https://events.camdencountylibrary.org/">
+              <button class="back-card-button"> GO TO EVENTS </button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Meeting Rooms Flip Card -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="btn btn-border-meeting card-img">
+              <img src="./images/MeetingRoomGreenAvenir_NoTxt.png" alt="Meeting Room Button"
+                style="width:430px;height:430px;" />
+              <h2 class="translatable card-text-meetings">RESERVE A ROOM</h2>
+            </div>
+          </div>
+          <div class="flip-card-back-meetingroom">
+            <h3 class="translatable">RESERVE A ROOM</h3>
+            <p class="translatable">Reserve meeting rooms for events and gatherings.</p>
+            <a href="https://events.camdencountylibrary.org/reserve-room/by-calendar">
+              <button class="back-card-button"> GO TO ROOM RESERVATION </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!--? PHOTO CAROUSEL -->
+
+  <div class="container">
+    <div class="carousel-view">
+      <button class="arrow left" onclick="moveSlide('left')"><img src="images/leftarrow.png" alt="Left Arrow"></button>
+      <ul id="item-list" class="item-list"></ul>
+      <button class="arrow right" onclick="moveSlide('right')"><img src="images/rightarrow.png"
+          alt="Right Arrow"></button>
+
+    </div>
+  </div>
+
+  <!-- <div class="container">
+  <div class="carousel-view">>
+    <div id="item-list" class="item-list">
+      <div id="gallery"></div>
+      <img id="item" class="item"
+        src="images/Carousel/img2.jpg" />
+      <img id="item" class="item"
+        src="images/Carousel/img3.jpg" />
+      <img id="item" class="item"
+        src="images/Carousel/img4.jpg" />
+      <img id="item" class="item"
+        src="images/Carousel/img5.jpg" />
+      <img id="item" class="item"
+        src="images/Carousel/bubbles.jpg" />
+      <img id="item" class="item"
+        src="images/Carousel/Buster.jpg" />
+      <img id="item" class="item"
+        src="images/Carousel/Pride.jpg" />
+      <img id="item" class="item"
+        src="images/Carousel/Doggo.jpg" />
+      <img id="item" class="item"
+        src="images/Carousel/ME_trickortreat.jpg" />
+
+  </div>
+</div> -->
+
+  <div class="footer">
+
+    <div class="footer-button-display">
+      <a href="https://www.camdencountylibrary.org/">
+        <img class="logo-img-footer" src="./images/CCLS_LOGO_WHITE_T.png" alt="Camden County Library System Logo" />
+      </a>
+
+      <button class="translatable" id="text-size">TEXT SIZE</button>
+      <div id="fontSizeMenu">
+        <div class="translatable font-size-option" data-size="18px">Small</div>
+        <div class="translatable font-size-option" data-size="20px">Medium</div>
+        <div class="translatable font-size-option" data-size="22px">Large</div>
+        <div class="translatable font-size-option" data-size="24px">Extra Large</div>
+      </div>
+
+      <button class="translatable" id="ctButton">CONTRAST</button>
+
+      <button class="language-button">LANGUAGE</button>
+      <div id="myPopup" class="popup">
+        <div class="popup-content">
+          <h2 style="color: green">
+            SELECT A LANGUAGE
+          </h2>
+
+          <div class="popup-menu">
+            <button class="popup-button" id="english-button">ENGLISH</button>
+            <button class="popup-button" id="spanish-button">ESPAÑOL</button>
+          </div>
+
+          <button class="translateable" id="closePopup">
+            CLOSE
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>
