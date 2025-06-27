@@ -41,7 +41,7 @@
 		font-family: 'Avenir-Light';
 		src: url('./fonts/Avenir-Book-01.ttf') format('truetype');
 	}
-	/** Adds the Avenir LIGHT Custom font */
+	/** Adds the Avenir MEDIUM Custom font */
 	@font-face {
 		font-family: 'Avenir-Medium';
 		src: url('./fonts/Avenir-Medium-09.ttf') format('truetype');
@@ -92,6 +92,11 @@
 h2 {
 	font-family: 'Avenir-Black';
 	font-size: 2.5em;
+}
+
+p {
+	font-family: 'Avenir-Black';
+	font-size: 0.90em;
 }
 
 /* Text for each individual cards  */
@@ -317,7 +322,7 @@ h2 {
 
 .container {
 	max-width: 1080px;
-	height: 25vh;
+	height: 10vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
