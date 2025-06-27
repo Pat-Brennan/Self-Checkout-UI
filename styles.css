@@ -112,21 +112,30 @@ h2 {
 	
 }
 
+.card-text-newsletter {
+    color: #937e00;
+}
+
+.card-text-beanstack{
+	color:	#a03494;
+}
+
 /* Flip card styling */
-.flip-card {
-	width: 48%; /* Keeps it to two cards per row */
-	height: 500px;
+ .flip-card {
+	width: 350px;           /* Maintains two cards per row. Previously 47% with 4 titles. Temporarily 350px. */ 
+	height: 375px;        /* Reduced height */
 	perspective: 1000px;
-  }
+	}
 
   /* Flip card container. It's what holds all the cards. */
   .flip-card-container {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	gap: 20px; /* Adjust the gap as needed */
+	gap: 50px; /* Adjust the gap as needed. PREVIOUS: 20PX... TEMPORARILY: 40PX*/
 	margin: 20px auto; /* Center the container horizontally */
 	padding: 20px;
+	max-width: 750px; /* NEW: Keeps container centered and cards from spreading too wide */
   }
   
   .flip-card .card img {
@@ -137,8 +146,8 @@ h2 {
 /*This container is needed to position the front and back side of the card. */
   .flip-card-inner {
 	position: relative;
-	width: 500px;
-	height:500px;
+	width: 350px;
+	height: 350px;
 	text-align: center; /*Ths is centering "h2" headers on front of card. */
 	transform-style: preserve-3d;
 	transition: transform 0.60s;
@@ -147,10 +156,10 @@ h2 {
   }
   
   /* Flip card faces */
-  .flip-card-front, .flip-card-back-catalog, .flip-card-back-checkout, .flip-card-back-events, .flip-card-back-meetingroom {
+  .flip-card-front, .flip-card-back-catalog, .flip-card-back-checkout, .flip-card-back-events, .flip-card-back-meetingroom, .flip-card-back-newsletter, .flip-card-back-beanstack {
     position: absolute;
-    width: 500px;
-    height: 500px;
+    width: 350px;
+    height: 350px;
     backface-visibility: hidden;
 		font-size: 20px;
 		border-radius: 4px;
@@ -166,7 +175,7 @@ h2 {
 	flex-direction: column;
   }  */
 
-  .flip-card-back-catalog, .flip-card-back-checkout, .flip-card-back-events, .flip-card-back-meetingroom {
+  .flip-card-back-catalog, .flip-card-back-checkout, .flip-card-back-events, .flip-card-back-meetingroom, .flip-card-back-newsletter, .flip-card-back-beanstack {
     color: white;
     display: flex;
     justify-content: center;
@@ -192,6 +201,16 @@ h2 {
 	background-color: #a6c838;
 
   }
+
+  .flip-card-back-newsletter{
+	background-color: #937e00;
+  }
+
+  .flip-card-back-beanstack{
+	background-color: #a03494;
+  }
+
+
 /* Combined button style */
 .back-card-button {
   appearance: button;

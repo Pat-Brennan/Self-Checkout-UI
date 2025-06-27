@@ -32,7 +32,7 @@ ctButton.addEventListener('click', () => {
     document.body.style.filter = 'none';
     
     // Reset the background color of flip cards
-    const flipCards = document.querySelectorAll(".flip-card-back-catalog, .flip-card-back-checkout, .flip-card-back-events, .flip-card-back-meetingroom");
+    const flipCards = document.querySelectorAll(".flip-card-back-catalog, .flip-card-back-checkout, .flip-card-back-events, .flip-card-back-meetingroom, .flip-card-back-newsletter, .flip-card-back-beanstack");
     flipCards.forEach(function(card) {
       card.style.backgroundColor = ''; // Reset to default or initial state
     });
@@ -43,7 +43,7 @@ ctButton.addEventListener('click', () => {
     document.body.style.filter = 'grayscale(100%)';
     
     // Change the background color of the flip cards to specific hex. Requested by Carly and Lisa specifically for accessibility/visibility.
-    const flipCards = document.querySelectorAll(".flip-card-back-catalog, .flip-card-back-checkout, .flip-card-back-events, .flip-card-back-meetingroom");
+    const flipCards = document.querySelectorAll(".flip-card-back-catalog, .flip-card-back-checkout, .flip-card-back-events, .flip-card-back-meetingroom, .flip-card-back-newsletter, .flip-card-back-beanstack");
     flipCards.forEach(function(card) {
       card.style.backgroundColor = '#161616'; // Setting to the desired hex color.
     });
