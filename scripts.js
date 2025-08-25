@@ -288,7 +288,7 @@ function calculateSlideWidth() {
 }
 
 // Fetch images from Flickr
-fetch('https://www.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=e432bc32d8457092de91848dd045e6e0&photoset_id=72177720323070827&user_id=68661893@N00&format=json&nojsoncallback=1')
+fetch('https://www.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=e432bc32d8457092de91848dd045e6e0&photoset_id=72177720328601492&user_id=68661893@N00&format=json&nojsoncallback=1')
   .then(response => response.json())
   .then(data => {
     const photos = data.photoset.photo.slice(0, 15);
